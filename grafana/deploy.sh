@@ -1,3 +1,5 @@
+#git add --chmod=+x .\deploy.sh
+
 set -a
 source ./env.env
 
