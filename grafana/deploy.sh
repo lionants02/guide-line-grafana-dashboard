@@ -4,6 +4,8 @@ source env.env
 echo "S_DATA=$S_DATA"
 echo "SERVICE_NAME=$SERVICE_NAME"
 
+docker pull $DOCKER_IMAGE
+
 echo "Create folder $S_DATA/datasources"
 mkdir -p $S_DATA/datasources
 echo "Create folder $S_DATA/lib_grafana"
