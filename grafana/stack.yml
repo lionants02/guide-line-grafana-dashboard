@@ -7,10 +7,10 @@ services:
     ports:
       - ${GRAFANA_PORT}:3000
     volumes:
-      - "${S_DATA}/datasources:/etc/grafana/provisioning/datasources:rw"
-      - "${S_DATA}/lib_grafana:/var/lib/grafana:rw"
-      - "${S_DATA}/grafana.ini:/etc/grafana/grafana.ini:rw"
-      - "${S_DATA}/dashboard:/etc/grafana/provisioning/dashboards:rw"
+      - "./data/datasources:/etc/grafana/provisioning/datasources:rw"
+      - "./data/lib_grafana:/var/lib/grafana:rw"
+      - "./data/grafana.ini:/etc/grafana/grafana.ini:rw"
+      - "./data/dashboard:/etc/grafana/provisioning/dashboards:rw"
     deploy:
       resources:
         limits:
@@ -21,4 +21,4 @@ services:
       interval: 30s
       timeout: 20s
       retries: 3
-      start_period: 40s
+      start_period: 15s
