@@ -9,7 +9,7 @@ services:
     volumes:
       - "./data/datasources:/etc/grafana/provisioning/datasources:rw"
       - "./data/lib_grafana:/var/lib/grafana:rw"
-      - "./data/grafana.ini:/etc/grafana/grafana.ini:rw"
+      - "./grafana.ini:/etc/grafana/grafana.ini:rw"
       - "./data/dashboard:/etc/grafana/provisioning/dashboards:rw"
     deploy:
       resources:
